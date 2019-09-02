@@ -1,9 +1,91 @@
-<!DOCTYPE html>
-html(lang="zh")
-    head
-        meta(charset="UTF-8")
-        title 日子選物
-        link(rel="stylesheet", href="style.css")
-        link(rel="shortcut icon", href="imgs/favicon07.png", type="image/x-icon")
-    body
-        div (id="member")
+doctype html(lang='zh')
+head
+    meta(charset='UTF-8')   
+    title &#x65E5;&#x5B50;&#x9078;&#x7269; 
+    link(rel='stylesheet', href='style.css')    
+    link(rel='shortcut icon', href='imgs/favicon07.png', type='image/x-icon')
+body
+    #button
+        a(href='signup.html') 會員登入
+        a(href='#') 購物車
+    #nav
+        nav
+            a(href='index.html')
+                img.logo(src='imgs/logo.png', alt='日子選物logo')                
+            .link
+                a(href='newarrivals.html') 最新商品
+                a(href='newarrivals.html') 文具用品
+                a(href='newarrivals.html') 生活收納
+                a(href='newarrivals.html') 美妝保養
+                a(href='#') 品牌總覽
+            
+    #member
+        h2.memberonly 聯絡我們
+        form.contactus-form(method='post')
+            label(for='name') 姓名:
+            input#name(type='text', name='name', required placeholder='請輸入您的姓名')                                                  
+            label(for='email') 信箱:
+            input#email(type='email', name='email', required placeholder='請輸入您的信箱')                                                  
+            label(for='phone') 電話:
+            input#phone(type='phone', name='phone', required placeholder='請輸入您的電話')                                              
+            label(for='message') 內容:
+            textarea#message(rows='8', cols='30', placeholder='輸入詢問內容' required)                                        
+            #button
+                input.btn(type='reset', value='重新輸入')
+                        
+                input.btn(type='submit', value='確認送出')
+    
+                    
+    .inner
+        section.online-shop.col-1
+            h3.h5 Online Shop
+            ul.contents
+                li
+                    a(href='newarrivals.html') 最新商品
+                                    
+                li
+                    a(href='newarrivals.html') 文具用品
+                                    
+                li
+                    a(href='newarrivals.html') 生活收納
+                                    
+                li
+                    a(href='newarrivals.html') 美妝保養
+                                    
+                li
+                    a(href='#') 品牌總覽
+                                  
+        section.how-to-shop.col-2
+            h3.h5 How to shop                         
+            ul.content
+                li
+                    a(href='#') 關於我們
+                                
+                li
+                    a(href='#') 聯絡我們
+                                  
+        section.metalinks.col-3
+            h3.h5 Daily Groceries               
+            ul.content
+                li
+                    a(href='aboutme.html') 關於我們
+                                    
+                li
+                    a(href='contactus.html') 聯絡我們
+                                      
+        section.follow-us.col-4
+            h3.h5 Follow us
+                        
+            ul.content
+                li.instagram
+                    a(href='#', target='_blank') Instagram
+                                                                      
+                li.facebook
+                    a(href='#', target='_blank') Facebook
+                                       
+        section.other
+            form.form-box(method='post', action='/tw/newsletter/subscribe/')
+            input#form-email(name='email', placeholder='Email Address', value='', type='text')
+            input#form-element(value='訂閱電子報', type='submit')
+                
+    #copyright Copyright &copy; 2019 &copy; 日子選物. ALL RIGHTS RESERVED.
